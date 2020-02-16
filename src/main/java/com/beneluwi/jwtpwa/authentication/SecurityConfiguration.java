@@ -24,13 +24,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(
                         "/api/public",
-                        "/public/**",
-                        "/static/**",
-                        "/*.json",
-                        "/*.png",
-                        "/index.html"
+                        "/api/authenticate",
+                        "/*"
                 ).permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/api/*").authenticated()
                 .and()
                 .addFilter(new JwtAuthenticationFilter(authenticationManager()))
                 .addFilter(new JwtAuthorizationFilter(authenticationManager()))
