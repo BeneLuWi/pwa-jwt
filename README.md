@@ -18,3 +18,5 @@
 * Check if there is a Token in the ``localstorage`` 
 * Login w/ password and username to ``api/authenticate``
 * Save Token to ``localstorage``
+
+🚀🚀JWT AUTH IS READY🚀🚀
